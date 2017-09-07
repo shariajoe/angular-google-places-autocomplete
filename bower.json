@@ -1,12 +1,13 @@
 {
   "name": "angular-google-places-autocomplete",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "main": [
-      "./src/autocomplete.js",
-      "./src/autocomplete.css"
+    "./src/autocomplete.js",
+    "./src/autocomplete.css"
   ],
   "dependencies": {
-    "angular": "^1.2.x"
+    "angular": "^1.2.x",
+    "angular-google-places-autocomplete": "https://github.com/shariajoe/angular-google-places-autocomplete.git#^0.2.8"
   },
   "devDependencies": {
     "angular-mocks": "^1.2.x"
