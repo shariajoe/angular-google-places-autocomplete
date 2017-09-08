@@ -222,7 +222,14 @@ angular.module('google.places', [])
                         if (isString(modelValue)) {
                             viewValue = modelValue;
                         } else if (isObject(modelValue)) {
-                            viewValue = modelValue.name;
+                            var formattedAddress = modelValue.formatted_address,
+                                locationName = modelValue.name;
+
+                            if(formattedAddress.match(locationName)){
+                               viewValue = formattedAddress.replace(locationName, locationName);
+                            }else{
+                                viewValue = locationName.concat(', ' + formattedAddress)
+                            }
                         }
 
                         return viewValue;
